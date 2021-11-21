@@ -462,7 +462,7 @@ local function removeface()
 	end
 	local info = {
 		run = run,
-		description = [[Removes your face decal.]],
+		description = [[Removes your face decal until you rejoin.]],
 		name = 'Remove Face',
 		icon = 'rbxassetid://8066162469',
 		owner = 'Scriptonix'
