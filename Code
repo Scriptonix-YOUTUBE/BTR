@@ -1,0 +1,554 @@
+local UIS = game:GetService('UserInputService')
+local TS = game:GetService('TweenService')
+local http = game:GetService('HttpService')
+local t = true
+local w = true
+local sc = nil
+local ty = nil
+
+
+
+local console = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local top = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local left = Instance.new("Frame")
+local textcontainer = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local TextLabel_2 = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local left_2 = Instance.new("Frame")
+local better = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local other = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
+local scripts = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local scriptexample = Instance.new("TextButton")
+local icon = Instance.new("ImageLabel")
+local UICorner_7 = Instance.new("UICorner")
+local name = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local desc = Instance.new("TextLabel")
+local foreshadow = Instance.new("Frame")
+local UICorner_10 = Instance.new("UICorner")
+local en = Instance.new("TextButton")
+local icon_2 = Instance.new("ImageLabel")
+local UICorner_11 = Instance.new("UICorner")
+local scname = Instance.new("TextLabel")
+local exec = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local save = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local scname_2 = Instance.new("TextLabel")
+local creatorname = Instance.new("TextLabel")
+
+
+console.Name = "console"
+console.Parent = game.CoreGui
+console.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+console.ResetOnSpawn = false
+
+main.Name = "main"
+main.Parent = console
+main.BackgroundColor3 = Color3.fromRGB(57, 57, 61)
+main.BorderSizePixel = 0
+main.Position = UDim2.new(.5,0,1.5, 0)
+main.Size = UDim2.new(0, 723, 0, 441)
+main.AnchorPoint = Vector2.new(.5, .5)
+
+top.Name = "top"
+top.Parent = main
+top.BackgroundColor3 = Color3.fromRGB(29, 29, 31)
+top.BorderSizePixel = 0
+top.Size = UDim2.new(0, 723, 0, 28)
+
+TextLabel.Parent = top
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 164, 0, 28)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "Better Roblox"
+TextLabel.TextColor3 = Color3.fromRGB(88, 91, 102)
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner.Parent = top
+
+left.Name = "left"
+left.Parent = main
+left.BackgroundColor3 = Color3.fromRGB(44, 46, 52)
+left.BorderSizePixel = 0
+left.Position = UDim2.new(0, 0, 0.0634920672, 0)
+left.Size = UDim2.new(0, 289, 0, 413)
+
+textcontainer.Name = "textcontainer"
+textcontainer.Parent = left
+textcontainer.BackgroundColor3 = Color3.fromRGB(22, 22, 24)
+textcontainer.Position = UDim2.new(0.275073439, 0, 0.232071549, 0)
+textcontainer.Size = UDim2.new(0, 200, 0, 28)
+
+UICorner_2.Parent = textcontainer
+
+TextBox.Parent = textcontainer
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.Position = UDim2.new(0.0350000001, 0, 0, 0)
+TextBox.Size = UDim2.new(0.964999974, 0, 1, 0)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+TextBox.PlaceholderText = "Search..."
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+TextBox.TextStrokeTransparency = 0.500
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_2.Parent = textcontainer
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0, 0, -1, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 28)
+TextLabel_2.Font = Enum.Font.GothamBlack
+TextLabel_2.Text = "SEARCH"
+TextLabel_2.TextColor3 = Color3.fromRGB(88, 91, 102)
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+UICorner_3.Parent = left
+
+left_2.Name = "left"
+left_2.Parent = left
+left_2.BackgroundColor3 = Color3.fromRGB(44, 46, 52)
+left_2.BackgroundTransparency = 1.000
+left_2.BorderSizePixel = 0
+left_2.Position = UDim2.new(0, 0, 0.299868166, 0)
+left_2.Size = UDim2.new(0, 289, 0, 288)
+
+better.Name = "better"
+better.Parent = left_2
+better.BackgroundColor3 = Color3.fromRGB(44, 46, 52)
+better.Position = UDim2.new(0.273356408, 0, 0.0659722239, 0)
+better.Size = UDim2.new(0, 200, 0, 29)
+better.Font = Enum.Font.SourceSans
+better.Text = "Better Roblox scripts"
+better.TextColor3 = Color3.fromRGB(255, 255, 255)
+better.TextScaled = true
+better.TextSize = 14.000
+better.TextWrapped = true
+
+UICorner_4.Parent = better
+
+other.Name = "other"
+other.Parent = left_2
+other.BackgroundColor3 = Color3.fromRGB(44, 46, 52)
+other.Position = UDim2.new(0.273356408, 0, 0.1875, 0)
+other.Size = UDim2.new(0, 200, 0, 29)
+other.Font = Enum.Font.SourceSans
+other.Text = "Other scripts"
+other.TextColor3 = Color3.fromRGB(255, 255, 255)
+other.TextScaled = true
+other.TextSize = 14.000
+other.TextWrapped = true
+
+UICorner_5.Parent = other
+
+UICorner_6.Parent = main
+
+scripts.Name = "scripts"
+scripts.Parent = main
+scripts.BackgroundColor3 = Color3.fromRGB(44, 46, 52)
+scripts.BackgroundTransparency = 1.000
+scripts.BorderSizePixel = 0
+scripts.Position = UDim2.new(0.399723381, 0, 0.0634920672, 0)
+scripts.Size = UDim2.new(0, 434, 0, 413)
+
+ScrollingFrame.Parent = scripts
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.Position = UDim2.new(0.0184331797, 0, 0.0169491526, 0)
+ScrollingFrame.Size = UDim2.new(0, 426, 0, 390)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 15, 0)
+
+UIGridLayout.Parent = ScrollingFrame
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0, 200, 0, 200)
+
+scriptexample.Name = "scriptexample"
+scriptexample.Parent = ScrollingFrame
+scriptexample.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scriptexample.BackgroundTransparency = 1.000
+scriptexample.ClipsDescendants = true
+scriptexample.Size = UDim2.new(0, 154, 0, 142)
+scriptexample.Visible = false
+scriptexample.Font = Enum.Font.SourceSans
+scriptexample.Text = " "
+scriptexample.TextColor3 = Color3.fromRGB(0, 0, 0)
+scriptexample.TextSize = 14.000
+
+icon.Name = "icon"
+icon.Parent = scriptexample
+icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+icon.BackgroundTransparency = 1.000
+icon.Size = UDim2.new(0, 200, 0, 142)
+icon.ZIndex = 2
+icon.Image = "rbxassetid://3608731406"
+
+UICorner_7.Parent = icon
+
+name.Name = "name"
+name.Parent = scriptexample
+name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+name.BackgroundTransparency = 1.000
+name.Position = UDim2.new(0.0700000003, 0, 0.485000014, 0)
+name.Size = UDim2.new(0, 172, 0, 24)
+name.ZIndex = 3
+name.Font = Enum.Font.SourceSans
+name.Text = "Example"
+name.TextColor3 = Color3.fromRGB(255, 255, 255)
+name.TextScaled = true
+name.TextSize = 14.000
+name.TextWrapped = true
+name.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame.Parent = scriptexample
+Frame.BackgroundColor3 = Color3.fromRGB(31, 31, 35)
+Frame.Size = UDim2.new(1, 0, 1, 0)
+
+UICorner_8.Parent = Frame
+
+Frame_2.Parent = scriptexample
+Frame_2.BackgroundColor3 = Color3.fromRGB(31, 31, 35)
+Frame_2.Position = UDim2.new(0, 0, 0.479227751, 0)
+Frame_2.Size = UDim2.new(1, 0, 0.520772219, 0)
+Frame_2.ZIndex = 2
+
+UICorner_9.Parent = Frame_2
+
+desc.Name = "desc"
+desc.Parent = scriptexample
+desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+desc.BackgroundTransparency = 1.000
+desc.Position = UDim2.new(0.0700000003, 0, 0.660000026, 0)
+desc.Size = UDim2.new(0, 172, 0, 59)
+desc.ZIndex = 3
+desc.Font = Enum.Font.SourceSans
+desc.Text = "hi so you shouldnt be reading this text if you are then some bug happened and you should take a pic and send to owner so he can fix but you shouldnt be seeing this so i wouldnt be worried"
+desc.TextColor3 = Color3.fromRGB(255, 255, 255)
+desc.TextSize = 14.000
+desc.TextWrapped = true
+desc.TextXAlignment = Enum.TextXAlignment.Left
+desc.TextYAlignment = Enum.TextYAlignment.Top
+
+foreshadow.Name = "foreshadow"
+foreshadow.Parent = main
+foreshadow.BackgroundColor3 = Color3.fromRGB(44, 46, 52)
+foreshadow.BorderSizePixel = 0
+foreshadow.Position = UDim2.new(0, 0, 0.0634920672, 0)
+foreshadow.Size = UDim2.new(0, 723, 0, 413)
+foreshadow.Visible = false
+
+UICorner_10.Parent = foreshadow
+
+en.Name = "end"
+en.Parent = foreshadow
+en.BackgroundColor3 = Color3.fromRGB(44, 46, 52)
+en.Position = UDim2.new(0.948824346, 0, 0, 0)
+en.Size = UDim2.new(0, 23, 0, 23)
+en.Font = Enum.Font.GothamBold
+en.Text = "X"
+en.TextColor3 = Color3.fromRGB(255, 255, 255)
+en.TextScaled = true
+en.TextSize = 14.000
+en.TextWrapped = true
+
+icon_2.Name = "icon"
+icon_2.Parent = foreshadow
+icon_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+icon_2.Position = UDim2.new(0.044260025, 0, 0.0169491526, 0)
+icon_2.Size = UDim2.new(0, 225, 0, 177)
+icon_2.Image = "rbxassetid://3608731406"
+
+UICorner_11.Parent = icon_2
+
+scname.Name = "scname"
+scname.Parent = foreshadow
+scname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scname.BackgroundTransparency = 1.000
+scname.Position = UDim2.new(0.0442600287, 0, 0.460048437, 0)
+scname.Size = UDim2.new(0, 451, 0, 50)
+scname.Font = Enum.Font.SourceSans
+scname.Text = "Example"
+scname.TextColor3 = Color3.fromRGB(255, 255, 255)
+scname.TextScaled = true
+scname.TextSize = 14.000
+scname.TextWrapped = true
+scname.TextXAlignment = Enum.TextXAlignment.Left
+
+exec.Name = "exec"
+exec.Parent = foreshadow
+exec.BackgroundColor3 = Color3.fromRGB(46, 49, 54)
+exec.Position = UDim2.new(0.612724781, 0, 0.162227601, 0)
+exec.Size = UDim2.new(0, 119, 0, 28)
+exec.Font = Enum.Font.SourceSans
+exec.Text = "EXECUTE"
+exec.TextColor3 = Color3.fromRGB(255, 255, 255)
+exec.TextScaled = true
+exec.TextSize = 14.000
+exec.TextWrapped = true
+
+UICorner_12.Parent = exec
+
+save.Name = "save"
+save.Parent = foreshadow
+save.BackgroundColor3 = Color3.fromRGB(46, 49, 54)
+save.Position = UDim2.new(0.612724781, 0, 0.251815975, 0)
+save.Size = UDim2.new(0, 119, 0, 28)
+save.Font = Enum.Font.SourceSans
+save.Text = "SAVE"
+save.TextColor3 = Color3.fromRGB(255, 255, 255)
+save.TextScaled = true
+save.TextSize = 14.000
+save.TextWrapped = true
+
+UICorner_13.Parent = save
+
+scname_2.Name = "scname"
+scname_2.Parent = foreshadow
+scname_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scname_2.BackgroundTransparency = 1.000
+scname_2.Position = UDim2.new(0.0442600287, 0, 0.656174362, 0)
+scname_2.Size = UDim2.new(0, 654, 0, 127)
+scname_2.Font = Enum.Font.SourceSans
+scname_2.Text = "hey if you are reading this you are special!!! you found a way to bug this script into letting you see this message, congrats! take a pic and tell the owner how you did it and get your prise of literally nothing!"
+scname_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+scname_2.TextSize = 25.000
+scname_2.TextWrapped = true
+scname_2.TextXAlignment = Enum.TextXAlignment.Left
+scname_2.TextYAlignment = Enum.TextYAlignment.Top
+
+creatorname.Name = "creatorname"
+creatorname.Parent = foreshadow
+creatorname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+creatorname.BackgroundTransparency = 1.000
+creatorname.Position = UDim2.new(0.366528362, 0, 0.0169491898, 0)
+creatorname.Size = UDim2.new(0, 384, 0, 28)
+creatorname.Font = Enum.Font.SourceSans
+creatorname.Text = "bruhmynameissuperlongahahaha"
+creatorname.TextColor3 = Color3.fromRGB(255, 255, 255)
+creatorname.TextScaled = true
+creatorname.TextSize = 14.000
+creatorname.TextWrapped = true
+creatorname.TextXAlignment = Enum.TextXAlignment.Left
+
+local file = nil
+
+local y,re = pcall(function()
+	file = readfile('ScriptHubSaves.txt')
+end)
+
+if not y then
+	writefile('ScriptHubSaves.txt','[]')
+	file = http:JSONDecode(readfile('ScriptHubSaves.txt'))
+else
+	file = http:JSONDecode(file)
+end
+
+local function chatgui()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/Roblox-Chat/main/Code",true))()
+	end
+	local info = {
+		run = run,
+		description = [[Loads a nifty little GUI you can use to troll people.]],
+		name = 'Chat GUI',
+		icon = 'rbxassetid://8057956608',
+		owner = 'Scriptonix'
+	}
+	
+	return info
+end
+
+local function extrakeys()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/Roblox-Keys/main/Code",true))()
+	end
+	local info = {
+		run = run,
+		description = [[This gives you the following keybinds:
+		-(F1): [Locks camera to head (you can get some pretty sick screenshots with it)]
+		-(F2): [Locks camera to torso (you can get some pretty sick screenshots with it)]
+		-(<): [Aligns camera rotation to the left (useful for wall hopping in some games)]
+		-(>): [Aligns camera rotation to the right (useful for wall hopping in some games)]
+		-(ctrl + b): [Opens emote menu (changes default > keybind so that alignment keys was possible)]],
+		name = 'Extra Keys',
+		icon = 'rbxassetid://272678320',
+		owner = 'Scriptonix'
+	}
+
+	return info
+end
+
+local function skipfrappe()
+	local function run()
+		if game.PlaceId == 5580097107 then
+			local d = game.Players.LocalPlayer.PlayerGui:WaitForChild'Gui':WaitForChild'OOBE'
+			d.Changed:Connect(function()
+				if d.Visible then
+					game.ReplicatedStorage.Resources.RemoteFunction:InvokeServer("setOOBEStatus",false)
+					local ts = game:GetService("TeleportService")local p = game:GetService("Players").LocalPlayer ts:Teleport(game.PlaceId, p)
+				end
+			end)
+		end
+	end
+	local info = {
+		run = run,
+		description = [[Skips the annoying (literally impossible to beat without rejoining) rules segment Frappe won't fix]],
+		name = 'Skip Frappe Rules Segment',
+		icon = 'rbxassetid://839578807',
+		owner = 'Scriptonix'
+	}
+
+	return info
+end
+
+local myscripts = {
+	chatgui(),
+	extrakeys(),
+	skipfrappe()
+}
+
+local otherscripts = {
+	
+}
+
+
+local function change(inf)
+	sc = inf
+	creatorname.Text = inf.owner
+	scname.Text = inf.name
+	scname_2.Text = inf.description
+	icon_2.Image = inf.icon
+	foreshadow.Visible = true
+	if table.find(file,sc.name) then
+		save.Text = 'Unsave'
+	else
+		save.Text = 'Save'
+	end
+end
+
+local function loadscripts(tab)
+	for _, v in pairs(ScrollingFrame:GetChildren()) do
+		if v.Name == 'del' then
+			v:Destroy()
+		end
+	end
+	for _, v in pairs(tab) do
+		local clone = scriptexample:Clone()
+		clone.Visible = true
+		clone.Name = 'del'
+		clone.name.Text = v.name
+		clone.desc.Text = v.description
+		clone.icon.Image = v.icon
+		clone.Parent = ScrollingFrame
+		clone.MouseButton1Click:Connect(function()
+			if foreshadow.Visible == false then
+				change(v)
+			end
+		end)
+	end
+end
+
+local function runsaves()
+	for _, v in pairs(file) do
+		for _, scri in pairs(myscripts) do
+			if v == scri.name then
+				scri.run()
+			end
+		end
+		for _, scri in pairs(otherscripts) do
+			if v == scri.name then
+				scri.run()
+			end
+		end
+	end
+end
+
+local function bringup()
+	local tween = TS:Create(main,TweenInfo.new(2),{Position = UDim2.new(.5,0,.5, 0)})
+	tween:Play()
+end
+
+local function bringdown()
+	local tween = TS:Create(main,TweenInfo.new(2),{Position = UDim2.new(.5,0,1.5, 0)})
+	tween:Play()
+end
+
+
+
+
+
+UIS.InputBegan:Connect(function(imn)
+	if (imn.KeyCode == Enum.KeyCode.LeftControl and UIS:IsKeyDown(Enum.KeyCode.M)) or (imn.KeyCode == Enum.KeyCode.M and UIS:IsKeyDown(Enum.KeyCode.LeftControl)) then
+		if t and w then
+			spawn(function() w = false wait(3) w = true end)
+			t = false
+			bringup()
+		elseif not t and w then
+			spawn(function() w = false wait(3) w = true end)
+			t = true
+			bringdown()
+		end
+	end
+end)
+
+better.MouseButton1Click:Connect(function()
+	ty = myscripts
+	loadscripts(myscripts)
+end)
+
+other.MouseButton1Click:Connect(function()
+	ty = otherscripts
+	loadscripts(otherscripts)
+end)
+
+exec.MouseButton1Click:Connect(function()
+	sc.run()
+end)
+
+save.MouseButton1Click:Connect(function()
+	if save.Text == 'Save' then
+		table.insert(file,sc.name)
+		save.Text = 'Unsave'
+		writefile('ScriptHubSaves.txt',http:JSONEncode(file))
+	else
+		table.remove(file,table.find(file,sc.name))
+		save.Text = 'Save'
+		writefile('ScriptHubSaves.txt',http:JSONEncode(file))
+	end
+end)
+
+en.MouseButton1Click:Connect(function()
+	foreshadow.Visible = false
+end)
+
+TextBox.FocusLost:Connect(function()
+	local new = {}
+	for _, v in pairs(ty) do
+		if string.find(string.lower(v.name),string.lower(TextBox.Text)) then
+			table.insert(new,v)
+		end
+	end
+	loadscripts(new)
+end)
+
+loadscripts(myscripts)
+runsaves()
