@@ -374,7 +374,7 @@ local function chatgui()
 		icon = 'rbxassetid://8057956608',
 		owner = 'Scriptonix'
 	}
-	
+
 	return info
 end
 
@@ -445,6 +445,15 @@ end
 
 local function removeface()
 	local function run()
+		local function ismouse()
+			local y,re = pcall(function()
+				local m = game.Players.LocalPlayer:GetMouse()
+			end)
+			return y
+		end
+
+
+		repeat game:GetService'RunService'.RenderStepped:Wait() until ismouse()
 		local function doe(c)
 			c.Archivable = true
 
@@ -480,7 +489,7 @@ local myscripts = {
 }
 
 local otherscripts = {
-	
+
 }
 
 
