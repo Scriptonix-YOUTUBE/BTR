@@ -435,8 +435,8 @@ local function searchfling()
 		description = [[Searches the server for skids using InvisFling,
 		and prints out the result in the developer console (F9). This also provides immunity from the skid.
 		]],
-		name = 'Skip Frappe Rules Segment',
-		icon = 'rbxassetid://839578807',
+		name = 'Invis Fling Searcher',
+		icon = 'rbxassetid://8066010277',
 		owner = 'Scriptonix'
 	}
 
