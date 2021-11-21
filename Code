@@ -550,5 +550,6 @@ TextBox.FocusLost:Connect(function()
 	loadscripts(new)
 end)
 
+ty = myscripts
 loadscripts(myscripts)
 runsaves()
