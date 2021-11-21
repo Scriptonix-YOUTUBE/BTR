@@ -443,11 +443,40 @@ local function searchfling()
 	return info
 end
 
+local function removeface()
+	local function run()
+		local function doe(c)
+			c.Archivable = true
+
+			local h = c:WaitForChild'Head'
+			local f = h:WaitForChild('face',true)
+
+			if f then f:Destroy() end
+		end
+		local l = game.Players.LocalPlayer
+		local char = l.Character or l.CharacterAdded:Wait()
+		doe(char)
+		l.CharacterAdded:Connect(function(c)
+			doe(c)
+		end)
+	end
+	local info = {
+		run = run,
+		description = [[Removes your face decal.]],
+		name = 'Remove Face',
+		icon = 'rbxassetid://8066162469',
+		owner = 'Scriptonix'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
 	skipfrappe(),
-	searchfling()
+	searchfling(),
+	removeface()
 }
 
 local otherscripts = {
