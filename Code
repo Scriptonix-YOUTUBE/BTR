@@ -1,3 +1,14 @@
+local function ismouse()
+	local y,re = pcall(function()
+		local m = game.Players.LocalPlayer:GetMouse()
+	end)
+	return y
+end
+
+
+repeat game:GetService'RunService'.RenderStepped:Wait() until ismouse()
+
+
 local UIS = game:GetService('UserInputService')
 local TS = game:GetService('TweenService')
 local http = game:GetService('HttpService')
@@ -445,15 +456,6 @@ end
 
 local function removeface()
 	local function run()
-		local function ismouse()
-			local y,re = pcall(function()
-				local m = game.Players.LocalPlayer:GetMouse()
-			end)
-			return y
-		end
-
-
-		repeat game:GetService'RunService'.RenderStepped:Wait() until ismouse()
 		local function doe(c)
 			c.Archivable = true
 
@@ -480,12 +482,46 @@ local function removeface()
 	return info
 end
 
+local function invisicam()
+	local function run()
+		game:GetService'Players'.LocalPlayer.Changed:Connect(function()
+			game:GetService'Players'.DevCameraOcclusionMode = 'Invisicam'
+		end)
+	end
+	local info = {
+		run = run,
+		description = [[Allows you to put your camera through things and not be bound to the annoying objects in your view.]],
+		name = 'Invisicam',
+		icon = 'rbxassetid://8071864794',
+		owner = 'Scriptonix'
+	}
+
+	return info
+end
+
+local function freecam()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/Roblox-Freecam/main/Code",true))()
+	end
+	local info = {
+		run = run,
+		description = [[Allows you to spectate around using Shift+P.]],
+		name = 'Invisicam',
+		icon = 'rbxassetid://8072443742',
+		owner = 'Scriptonix/ROBLOX Studio'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
 	skipfrappe(),
 	searchfling(),
-	removeface()
+	removeface(),
+	invisicam(),
+	freecam()
 }
 
 local otherscripts = {
