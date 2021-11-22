@@ -484,6 +484,7 @@ end
 
 local function invisicam()
 	local function run()
+		game:GetService'Players'.DevCameraOcclusionMode = 'Invisicam'
 		game:GetService'Players'.LocalPlayer.Changed:Connect(function()
 			game:GetService'Players'.DevCameraOcclusionMode = 'Invisicam'
 		end)
@@ -530,6 +531,29 @@ local function krnlui()
 	return info
 end
 
+local function zoom()
+	local function run()
+		local LocalPlayer = game.Players.LocalPlayer
+		
+		LocalPlayer.CameraMaxZoomDistance = 99999999 
+		LocalPlayer.CameraMinZoomDistance = -99999999
+
+		LocalPlayer.Changed:Connect(function()
+			LocalPlayer.CameraMaxZoomDistance = 99999999 
+			LocalPlayer.CameraMinZoomDistance = -99999999
+		end)
+	end
+	local info = {
+		run = run,
+		description = [[Removes your zoom limit, allowing you to zoom out almost infinitely.]],
+		name = 'Remove Zoom Limit',
+		icon = 'rbxassetid://82105965',
+		owner = 'Scriptonix'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -538,7 +562,8 @@ local myscripts = {
 	removeface(),
 	invisicam(),
 	freecam(),
-	krnlui()
+	krnlui(),
+	zoom()
 }
 
 local otherscripts = {
