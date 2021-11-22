@@ -506,7 +506,7 @@ local function freecam()
 	local info = {
 		run = run,
 		description = [[Allows you to spectate around using Shift+P.]],
-		name = 'Invisicam',
+		name = 'Freecam',
 		icon = 'rbxassetid://8072443742',
 		owner = 'Scriptonix/ROBLOX Studio'
 	}
