@@ -514,6 +514,22 @@ local function freecam()
 	return info
 end
 
+local function krnlui()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/Internal-UI/main/Code",true))()
+	end
+	local info = {
+		run = run,
+		description = [[Gives you a KRNL themed executor (Insert).
+		This does work on things other then KRNL.]],
+		name = 'KRNL Internal UI',
+		icon = 'rbxassetid://7196727550',
+		owner = 'Scriptonix'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -521,7 +537,8 @@ local myscripts = {
 	searchfling(),
 	removeface(),
 	invisicam(),
-	freecam()
+	freecam(),
+	krnlui()
 }
 
 local otherscripts = {
