@@ -554,6 +554,40 @@ local function zoom()
 	return info
 end
 
+local function boombox()
+	local function run()
+		local function createbutton(g)
+			local b = Instance.new('TextButton',g)
+			b.Size = UDim2.new(.044,0,.101,0)
+			b.Position = UDim2.new(.955,0,.001,0)
+			b.Text = 'X'
+			b.TextColor3 = Color3.fromRGB(255,255,255)
+			b.Font = Enum.Font.SourceSansBold
+			b.TextScaled = true
+			b.BackgroundTransparency = 1
+			b.MouseButton1Click:Wait()
+			g.Parent:Destroy()
+		end
+
+		repeat game:GetService("RunService").RenderStepped:wait() until game.Players.LocalPlayer ~= nil
+
+		game.Players.LocalPlayer:WaitForChild('PlayerGui').ChildAdded:Connect(function(g)
+			if g.Name == 'ChooseSongGui' then
+				createbutton(g:WaitForChild'Frame')
+			end
+		end)
+	end
+	local info = {
+		run = run,
+		description = [[Gives you an 'X' button to Boombox gears, which allows you to cancel.]],
+		name = 'Boombox Cancel Button',
+		icon = 'rbxassetid://8072628868',
+		owner = 'Scriptonix'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -563,7 +597,8 @@ local myscripts = {
 	invisicam(),
 	freecam(),
 	krnlui(),
-	zoom()
+	zoom(),
+	boombox()
 }
 
 local otherscripts = {
