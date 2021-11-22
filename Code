@@ -484,9 +484,9 @@ end
 
 local function invisicam()
 	local function run()
-		game:GetService'Players'.DevCameraOcclusionMode = 'Invisicam'
+		game:GetService'Players'.LocalPlayer.DevCameraOcclusionMode = 'Invisicam'
 		game:GetService'Players'.LocalPlayer.Changed:Connect(function()
-			game:GetService'Players'.DevCameraOcclusionMode = 'Invisicam'
+			game:GetService'Players'.LocalPlayer.DevCameraOcclusionMode = 'Invisicam'
 		end)
 	end
 	local info = {
@@ -588,6 +588,22 @@ local function boombox()
 	return info
 end
 
+local function emotes()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/Roblox-Emotes/main/Code",true))()
+	end
+	local info = {
+		run = run,
+		description = [[This allows you to use ALL emotes, without cost!
+		Examples: '/e around town', '/e t', '/e rodeo dance', etc.]],
+		name = 'FREE R15 Emotes',
+		icon = 'rbxassetid://8072687585',
+		owner = 'Scriptonix'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -598,7 +614,8 @@ local myscripts = {
 	freecam(),
 	krnlui(),
 	zoom(),
-	boombox()
+	boombox(),
+	emotes()
 }
 
 local otherscripts = {
