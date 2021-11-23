@@ -534,7 +534,7 @@ end
 local function zoom()
 	local function run()
 		local LocalPlayer = game.Players.LocalPlayer
-		
+
 		LocalPlayer.CameraMaxZoomDistance = 99999999 
 		LocalPlayer.CameraMinZoomDistance = -99999999
 
@@ -604,6 +604,21 @@ local function emotes()
 	return info
 end
 
+local function menu()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/Ingame-Context-Menu/main/Code",true))()
+	end
+	local info = {
+		run = run,
+		description = [[Gives you a context menu you can use by simply right clicking on textboxes, imagelabels, and textbuttons.]],
+		name = 'Ingame Context Menu',
+		icon = 'rbxassetid://8075392406',
+		owner = 'Scriptonix'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -615,7 +630,8 @@ local myscripts = {
 	krnlui(),
 	zoom(),
 	boombox(),
-	emotes()
+	emotes(),
+	menu()
 }
 
 local otherscripts = {
