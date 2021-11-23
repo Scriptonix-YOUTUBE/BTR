@@ -594,7 +594,7 @@ local function emotes()
 	end
 	local info = {
 		run = run,
-		description = [[This allows you to use ALL emotes, without cost!
+		description = [[This allows you to use all emotes, without cost.
 		Examples: '/e around town', '/e t', '/e rodeo dance', etc.]],
 		name = 'FREE R15 Emotes',
 		icon = 'rbxassetid://8072687585',
@@ -619,6 +619,21 @@ local function menu()
 	return info
 end
 
+local function hidden()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/Chat-Viewer/main/Code",true))() 
+	end
+	local info = {
+		run = run,
+		description = [[Allows you to see private messages + dances, straight to your chat.]],
+		name = 'Hidden Message Viewer',
+		icon = 'rbxassetid://8079598027',
+		owner = 'Scriptonix'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -631,7 +646,8 @@ local myscripts = {
 	zoom(),
 	boombox(),
 	emotes(),
-	menu()
+	menu(),
+	hidden()
 }
 
 local otherscripts = {
