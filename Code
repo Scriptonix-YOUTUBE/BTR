@@ -634,6 +634,22 @@ local function hidden()
 	return info
 end
 
+local function staircase()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/Staircase/main/Code",true))() 
+	end
+	local info = {
+		run = run,
+		description = [[Gives you a tool that lets you place staircases.
+		Press R to rotate.]],
+		name = 'Magic Staircase Tool',
+		icon = 'rbxassetid://8087739034',
+		owner = 'Scriptonix'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -647,7 +663,8 @@ local myscripts = {
 	boombox(),
 	emotes(),
 	menu(),
-	hidden()
+	hidden(),
+	staircase()
 }
 
 local otherscripts = {
@@ -668,7 +685,7 @@ local function change(inf)
 		save.Text = 'Save'
 	end
 end
-
+ 
 local function loadscripts(tab)
 	for _, v in pairs(ScrollingFrame:GetChildren()) do
 		if v.Name == 'del' then
