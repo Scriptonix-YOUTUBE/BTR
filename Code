@@ -650,6 +650,21 @@ local function staircase()
 	return info
 end
 
+local function ball()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Dylour/Fe-Ball/main/Code",true))() 
+	end
+	local info = {
+		run = run,
+		description = [[Roll around with extreme speeds into your friends, or just chill out.]],
+		name = 'FE Ball',
+		icon = 'rbxassetid://8165384182',
+		owner = 'Runte - Submitted by Xscube'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -668,7 +683,7 @@ local myscripts = {
 }
 
 local otherscripts = {
-
+	ball()
 }
 
 
@@ -685,7 +700,7 @@ local function change(inf)
 		save.Text = 'Save'
 	end
 end
- 
+
 local function loadscripts(tab)
 	for _, v in pairs(ScrollingFrame:GetChildren()) do
 		if v.Name == 'del' then
