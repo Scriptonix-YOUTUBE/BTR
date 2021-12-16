@@ -383,7 +383,7 @@ local function chatgui()
 		description = [[Loads a nifty little GUI you can use to troll people.]],
 		name = 'Chat GUI',
 		icon = 'rbxassetid://8057956608',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -403,7 +403,7 @@ local function extrakeys()
 		-(ctrl + b): Opens emote menu (changes default > keybind so that alignment keys was possible)]],
 		name = 'Extra Keys',
 		icon = 'rbxassetid://272678320',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -426,7 +426,7 @@ local function skipfrappe()
 		description = [[Skips the annoying (literally impossible to beat without rejoining) rules segment Frappe won't fix.]],
 		name = 'Skip Frappe Rules Segment',
 		icon = 'rbxassetid://839578807',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -448,7 +448,7 @@ local function searchfling()
 		]],
 		name = 'Invis Fling Searcher',
 		icon = 'rbxassetid://8066010277',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -476,7 +476,7 @@ local function removeface()
 		description = [[Removes your face decal until you rejoin.]],
 		name = 'Remove Face',
 		icon = 'rbxassetid://8066162469',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -494,7 +494,7 @@ local function invisicam()
 		description = [[Allows you to put your camera through things and not be bound to the annoying objects in your view.]],
 		name = 'Invisicam',
 		icon = 'rbxassetid://8071864794',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -509,7 +509,7 @@ local function freecam()
 		description = [[Allows you to spectate around using Shift+P.]],
 		name = 'Freecam',
 		icon = 'rbxassetid://8072443742',
-		owner = 'Scriptonix/ROBLOX Studio'
+		owner = 'Brisk/ROBLOX Studio'
 	}
 
 	return info
@@ -525,7 +525,7 @@ local function krnlui()
 		This does work on things other then KRNL.]],
 		name = 'KRNL Internal UI',
 		icon = 'rbxassetid://7196727550',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -548,7 +548,7 @@ local function zoom()
 		description = [[Removes your zoom limit, allowing you to zoom out almost infinitely.]],
 		name = 'Remove Zoom Limit',
 		icon = 'rbxassetid://82105965',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -582,7 +582,7 @@ local function boombox()
 		description = [[Gives you an 'X' button to Boombox gears, which allows you to cancel.]],
 		name = 'Boombox Cancel Button',
 		icon = 'rbxassetid://8072628868',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -598,7 +598,7 @@ local function emotes()
 		Examples: '/e around town', '/e t', '/e rodeo dance', etc.]],
 		name = 'FREE R15 Emotes',
 		icon = 'rbxassetid://8072687585',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -613,7 +613,7 @@ local function menu()
 		description = [[Gives you a context menu you can use by simply right clicking on textboxes, imagelabels, and textbuttons.]],
 		name = 'Ingame Context Menu',
 		icon = 'rbxassetid://8075392406',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -628,7 +628,7 @@ local function hidden()
 		description = [[Allows you to see private messages + dances, straight to your chat.]],
 		name = 'Hidden Message Viewer',
 		icon = 'rbxassetid://8079598027',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -644,7 +644,7 @@ local function staircase()
 		Press R to rotate.]],
 		name = 'Magic Staircase Tool',
 		icon = 'rbxassetid://8087739034',
-		owner = 'Scriptonix'
+		owner = 'Brisk'
 	}
 
 	return info
@@ -665,6 +665,37 @@ local function ball()
 	return info
 end
 
+local function clip()
+	local function run()
+		local UIS = game:GetService('UserInputService')
+
+		UIS.InputBegan:Connect(function(inp)
+			if (inp.KeyCode == Enum.KeyCode.LeftControl and UIS:IsKeyDown(Enum.KeyCode.G)) or (inp.KeyCode == Enum.KeyCode.G and UIS:IsKeyDown(Enum.KeyCode.LeftControl)) then
+				local h = game.Players.LocalPlayer.Character:WaitForChild('HumanoidRootPart')
+				h.Size = h.Size + Vector3.new(2,0,0)
+				local par = RaycastParams.new()
+				par.FilterDescendantsInstances = {h.Parent}
+				local ray = workspace:Raycast((h.CFrame*CFrame.new(0,0,-100)).p,(h.CFrame*CFrame.Angles(0,math.rad(180),0)).LookVector*120,par)
+				if ray and table.find(h:GetTouchingParts(),ray.Instance) then
+					h.CFrame = CFrame.lookAt(ray.Position,h.Position)
+				end
+				h.Size = h.Size - Vector3.new(2,0,0)
+			end
+		end)
+	end
+	local info = {
+		run = run,
+		description = [[On 12/16/2021, ROBLOX removed the ability to go to a corner and clip to the other side, no longer!
+Simply walk up to a wall (doesn't have to be the corners), and click CTRL + G.
+Note that this script is not completely accurate and you may have to adjust your character if it doesn't work, and this also has support for R15.]],
+		name = 'Bring Back Clipping',
+		icon = 'rbxassetid://8268082307',
+		owner = 'Brisk'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -679,7 +710,8 @@ local myscripts = {
 	emotes(),
 	menu(),
 	hidden(),
-	staircase()
+	staircase(),
+	clip()
 }
 
 local otherscripts = {
