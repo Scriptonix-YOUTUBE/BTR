@@ -60,6 +60,9 @@ local save = Instance.new("TextButton")
 local UICorner_13 = Instance.new("UICorner")
 local scname_2 = Instance.new("TextLabel")
 local creatorname = Instance.new("TextLabel")
+local closeitall = Instance.new("TextButton")
+local noer = Instance.new("UICorner")
+local imag = Instance.new("ImageLabel")
 
 
 console.Name = "console"
@@ -781,7 +784,46 @@ local function bringdown()
 end
 
 
+if _G.EnableToggleButton then
+	closeitall.Name = "closeitall"
+	closeitall.Parent = main
+	closeitall.BackgroundColor3 = Color3.fromRGB(32, 32, 35)
+	closeitall.Position = UDim2.new(0.360995859, 0, -0.0589569174, 0)
+	closeitall.Size = UDim2.new(0, 200, 0, 47)
+	closeitall.AutoButtonColor = false
+	closeitall.Font = Enum.Font.SourceSans
+	closeitall.Text = " "
+	closeitall.TextColor3 = Color3.fromRGB(0, 0, 0)
+	closeitall.TextSize = 14.000
 
+	noer.Name = "noer"
+	noer.Parent = closeitall
+
+	imag.Name = "imag"
+	imag.Parent = closeitall
+	imag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	imag.BackgroundTransparency = 1.000
+	imag.Position = UDim2.new(0.430152297, 0, 0.0638297871, 0)
+	imag.Size = UDim2.new(0, 26, 0, 23)
+	imag.Image = "rbxassetid://1312007357"
+	imag.ImageColor3 = Color3.fromRGB(90, 90, 90)
+
+	closeitall.MouseButton1Click:Connect(function()
+		if t and w then
+			spawn(function() w = false wait(3) w = true end)
+			t = false
+			bringup()
+		elseif not t and w then
+			spawn(function() w = false wait(3) w = true end)
+			t = true
+			bringdown()
+		end
+	end)
+else
+	closeitall:Destroy()
+	noer:Destroy()
+	imag:Destroy()
+end
 
 
 UIS.InputBegan:Connect(function(imn)
