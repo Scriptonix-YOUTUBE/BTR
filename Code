@@ -76,7 +76,7 @@ main.BackgroundColor3 = Color3.fromRGB(57, 57, 61)
 main.BorderSizePixel = 0
 main.Position = UDim2.new(.5,0,1.5, 0)
 main.Size = UDim2.new(0, 723, 0, 441)
-main.AnchorPoint = Vector2.new(.5, .5)
+main.AnchorPoint = Vector2.new(.5, 0)
 
 top.Name = "top"
 top.Parent = main
@@ -774,12 +774,12 @@ local function runsaves()
 end
 
 local function bringup()
-	local tween = TS:Create(main,TweenInfo.new(2),{Position = UDim2.new(.5,0,.5, 0)})
+	local tween = TS:Create(main,TweenInfo.new(2),{Position = UDim2.new(.5,0,.15,0)})
 	tween:Play()
 end
 
 local function bringdown()
-	local tween = TS:Create(main,TweenInfo.new(2),{Position = UDim2.new(.5,0,1.5, 0)})
+	local tween = TS:Create(main,TweenInfo.new(2),{Position = UDim2.new(.5,0,1,0)})
 	tween:Play()
 end
 
