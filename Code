@@ -699,6 +699,22 @@ Note that this script is not completely accurate and you may have to adjust your
 	return info
 end
 
+local function fly()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/Fly/main/code",true))()
+	end
+	local info = {
+		run = run,
+		description = [[Not your regular fly, this can work on almost every game!
+Click Ctrl-E to start/stop flying.]],
+		name = 'FE Fly',
+		icon = 'rbxassetid://8638542565',
+		owner = 'Brisk'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -714,7 +730,8 @@ local myscripts = {
 	menu(),
 	hidden(),
 	staircase(),
-	clip()
+	clip(),
+	fly()
 }
 
 local otherscripts = {
