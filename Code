@@ -715,6 +715,25 @@ Click Ctrl-E to start/stop flying.]],
 	return info
 end
 
+local function type()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/type-race/main/Code",true))()
+	end
+	local info = {
+		run = run,
+		description = [[Click the letter and it will finish the round for you, 
+		well making you look like a pro! 
+		Click On/Off to effectively pause typing, 
+		type the letter to continue.
+		(Use this in Type Race exclusively.)]],
+		name = 'Automatic Pro for Type Race',
+		icon = 'rbxassetid://4935795609',
+		owner = 'Brisk'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
