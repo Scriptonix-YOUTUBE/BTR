@@ -734,6 +734,21 @@ local function type()
 	return info
 end
 
+local function log()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/ROBLOX-Logger/main/Code",true))()
+	end
+	local info = {
+		run = run,
+		description = [[Logs Chat, Audios, etc to separate files, located in ROBLOX-Logs in your 'workspace' folder.]],
+		name = 'Logger',
+		icon = 'rbxassetid://868124386',
+		owner = 'Brisk'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -751,7 +766,8 @@ local myscripts = {
 	staircase(),
 	clip(),
 	fly(),
-	type()
+	type(),
+	log()
 }
 
 local otherscripts = {
