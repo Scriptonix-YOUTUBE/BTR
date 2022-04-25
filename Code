@@ -749,6 +749,21 @@ local function log()
 	return info
 end
 
+local function yeet()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/scuba/main/Code",true))()
+	end
+	local info = {
+		run = run,
+		description = [[The best FE fling out there!]],
+		name = 'Yeet GUI',
+		icon = 'rbxassetid://8599330674',
+		owner = 'Scuba'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -767,11 +782,12 @@ local myscripts = {
 	clip(),
 	fly(),
 	type(),
-	log()
+	log(),
 }
 
 local otherscripts = {
-	ball()
+	ball(),
+	yeet()
 }
 
 
