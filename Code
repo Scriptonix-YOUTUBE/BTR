@@ -764,6 +764,36 @@ local function yeet()
 	return info
 end
 
+local function esp()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua",true))()
+	end
+	local info = {
+		run = run,
+		description = [[The best esp out there!]],
+		name = 'Unnamed ESP',
+		icon = 'rbxassetid://8217650131',
+		owner = 'ic3w0lf22'
+	}
+
+	return info
+end
+
+local function inf()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",true))()
+	end
+	local info = {
+		run = run,
+		description = [[The best (your favorite) Admin script!]],
+		name = 'Infinite Yield',
+		icon = 'rbxassetid://9432371447',
+		owner = 'Edge/Moon/Zwolf/Toon'
+	}
+
+	return info
+end
+
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -787,7 +817,9 @@ local myscripts = {
 
 local otherscripts = {
 	ball(),
-	yeet()
+	yeet(),
+	esp(),
+	inf()
 }
 
 
