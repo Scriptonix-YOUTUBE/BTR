@@ -541,9 +541,11 @@ local function zoom()
 		LocalPlayer.CameraMaxZoomDistance = 99999999 
 		LocalPlayer.CameraMinZoomDistance = -99999999
 
-		LocalPlayer.Changed:Connect(function()
+		LocalPlayer:GetPropertyChangedSignal("CameraMaxZoomDistance"):Connect(function()
+			if LocalPlayer.CameraMaxZoomDistance < 999999 then
 			LocalPlayer.CameraMaxZoomDistance = 99999999 
 			LocalPlayer.CameraMinZoomDistance = -99999999
+			end
 		end)
 	end
 	local info = {
