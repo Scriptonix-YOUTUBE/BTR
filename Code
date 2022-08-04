@@ -787,10 +787,36 @@ local function inf()
 	end
 	local info = {
 		run = run,
-		description = [[The best (your favorite) Admin script!]],
+		description = [[The best Admin script out there.]],
 		name = 'Infinite Yield',
 		icon = 'rbxassetid://9432371447',
 		owner = 'Edge/Moon/Zwolf/Toon'
+	}
+
+	return info
+end
+
+local function bypas()
+local function run()
+		math.randomseed(tick())
+local ChatMain = require(game:GetService("Players").LocalPlayer.PlayerScripts.ChatScript.ChatMain)
+
+local function bypass()
+   ChatMain.MessagePosted:fire("LookatChat"..math.random(10000,1000000))
+   ChatMain.MessagesChanged:fire(math.random(100000,1000000))
+end
+
+game.Players.LocalPlayer.Chatted:Connect(function()
+    wait()
+    bypass()
+end)
+	end
+	local info = {
+		run = run,
+		description = [[Bypasses the chat look at function.]],
+		name = 'Chat Bypass',
+		icon = 'rbxassetid://9432371447',
+		owner = 'Brisk'
 	}
 
 	return info
@@ -815,6 +841,7 @@ local myscripts = {
 	fly(),
 	type(),
 	log(),
+	bypas()
 }
 
 local otherscripts = {
