@@ -815,7 +815,7 @@ end)
 		run = run,
 		description = [[Bypasses the chat look at function.]],
 		name = 'Chat Bypass',
-		icon = 'rbxassetid://9432371447',
+		icon = 'rbxassetid://10481853988',
 		owner = 'Brisk'
 	}
 
