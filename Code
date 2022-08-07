@@ -831,7 +831,7 @@ local function nostopobby()
 		description = [[OP GUI for No Stop Obby created by me.]],
 		name = 'NO STOP OBBY OP GUI',
 		icon = 'rbxassetid://10514740840',
-		owner = 'Edge/Moon/Zwolf/Toon'
+		owner = 'Brisk'
 	}
 
 	return info
