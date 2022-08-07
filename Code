@@ -822,6 +822,20 @@ end)
 	return info
 end
 
+local function nostopobby()
+	local function run()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Scriptonix-YOUTUBE/no-stop-obby/main/Code",true))()
+	end
+	local info = {
+		run = run,
+		description = [[OP GUI for No Stop Obby created by me.]],
+		name = 'NO STOP OBBY OP GUI',
+		icon = 'rbxassetid://10514740840',
+		owner = 'Edge/Moon/Zwolf/Toon'
+	}
+
+	return info
+end
 local myscripts = {
 	chatgui(),
 	extrakeys(),
@@ -841,7 +855,8 @@ local myscripts = {
 	fly(),
 	type(),
 	log(),
-	bypas()
+	bypas(),
+	nostopobby()
 }
 
 local otherscripts = {
